@@ -24,7 +24,7 @@ namespace Customers.Repositories
 
         public IEnumerable<Order> GetAll()
         {
-            return _context.Orders.Include(o => o.Items).ToList();
+            return _context.Orders.Include(o => o.Items).ToList(); //fetch dependent entity
         }
         public void Add(Order order)
         {
